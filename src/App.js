@@ -1,4 +1,4 @@
-import "./App.scss";
+// import "./App.scss";
 import RightSidebar from "./components/RightSidebar";
 import { Route, BrowserRouter as Router, Switch, NavLink } from "react-router-dom";
 import { FcHome } from "react-icons/fc";
@@ -20,7 +20,7 @@ function App() {
             <FcHome size="3em" />
           </div>
           <div className="routes">
-            <NavLink activeClassName="tab-active" className="tab" to="/">
+            <NavLink activeClassName="tab-active" className="tab" to="/" exact>
               <BiTachometer /> <span>Dashboard</span>
             </NavLink>
             <NavLink activeClassName="tab-active" className="tab" to="/rooms">
@@ -44,34 +44,36 @@ function App() {
           </div>
         </div>
         {/* End of Left Sidebar */}
-        <div className="main-container">
-          <header>
-            <input type="text" name="" id="search" placeholder="Search" />
-            <span id="date">
-              <strong>Monday,</strong> 15 February 2021
-            </span>
-          </header>
-          <Switch>
-            <Route path="/" exact>
-              <Dashboard />
-            </Route>
-            <Route path="/rooms">
-              <Rooms />
-            </Route>
-            <Route path="/devices">
-              <Devices />
-            </Route>
-            <Route path="/security">
-              <Security />
-            </Route>
-            <Route path="/statistics">
-              <Statistics />
-            </Route>
-            <Route path="/members">
-              <Members />
-            </Route>
-          </Switch>
+
+        <div id="search">
+          <input type="text" name="" placeholder="Search" />
         </div>
+        <div id="date">
+          <span>
+            <strong>Monday,</strong> 15 February 2021
+          </span>
+        </div>
+
+        <Switch>
+          <Route path="/" exact>
+            <Dashboard />
+          </Route>
+          <Route path="/rooms">
+            <Rooms />
+          </Route>
+          <Route path="/devices">
+            <Devices />
+          </Route>
+          <Route path="/security">
+            <Security />
+          </Route>
+          <Route path="/statistics">
+            <Statistics />
+          </Route>
+          <Route path="/members">
+            <Members />
+          </Route>
+        </Switch>
 
         <RightSidebar />
       </Router>
