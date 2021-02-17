@@ -1,16 +1,17 @@
 import React from "react";
-import "../scss/Dashboard.scss";
-// import { GiSofa } from "react-icons/gi";
+import "./Dashboard.scss";
+import Card from "./Card";
+import { GiSofa } from "react-icons/gi";
 
 // function Customcard(name, icon, kw) {}
 
 function Dashboard() {
   return (
     <React.Fragment>
-      <div className="card"></div>
-      <div className="card"></div>
-      <div className="card"></div>
-      <div className="card"></div>
+      <Card title="Living Room" icon={<GiSofa />} value="174" />
+      <Card title="Bedroom" icon={<GiSofa />} value="196" />
+      <Card title="Study Room" icon={<GiSofa />} value="289" />
+      <Card title="Kitchen" icon={<GiSofa />} value="201" />
       <div id="temperature" className="controls">
         <div className="icon"></div>
         <div className="text">

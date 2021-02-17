@@ -1,4 +1,5 @@
 import React from "react";
+import "../scss/SidebarRight.scss";
 import dashImage from "../img/dashimage.png";
 import { GiWifiRouter, GiMusicSpell, GiFlexibleLamp } from "react-icons/gi";
 import { FiWind, FiMessageCircle, FiBell } from "react-icons/fi";

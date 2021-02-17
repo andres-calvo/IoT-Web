@@ -1,0 +1,60 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  padding-top: 15px;
+  height: 100vh;
+  overflow: hidden;
+}
+#root {
+  height: 100%;
+}
+
+.App {
+  height: calc(100vh - 30px);
+  position: relative;
+  display: grid;
+  grid-template-columns: 200px repeat(4, 1fr) 250px;
+  grid-template-rows: 40px 120px repeat(4, 1fr);
+  gap: 15px;
+  width: 1200px;
+  margin: 0px auto;
+}
+.App > div {
+  border-radius: 3em;
+}
+
+// Main Content Of Dashboard
+.card {
+  background-color: orange;
+  grid-column: 2/0;
+  grid-row: 2/3;
+}
+#temperature {
+  background-color: blue;
+  grid-column: 2/4;
+  grid-row: 3/4;
+}
+
+#humidity {
+  background-color: red;
+  grid-column: 2/4;
+  grid-row: 4/5;
+}
+#light {
+  background-color: green;
+  grid-column: 4/6;
+  grid-row: 3/5;
+}
+#spending {
+  background-color: brown;
+  grid-column: 2/6;
+  grid-row: 5/7;
+}
